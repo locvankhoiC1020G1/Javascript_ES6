@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //toán tử spread: rải
+    //Nối 2 mảng với spread
+    let arr = ['js', 'ts', 'golang']
+    let arr2 = ['php', 'python']
+    let arr3 = [...arr2, ...arr]
+    console.log(arr3) // php python js ts golang
+    //nối 2 object lại với nhau
+    let object1 = {
+        name: 'khoi'
+    }
+    let object2 = {
+        age: 21
+    }
+    let object3 = {
+        ...object1,
+        ...object2
+    }
+    console.log(object3) // name: khoi, age:21
+    //ghi đè thuộc tính
+    let defaultConfig = {
+        api: 'google.com',
+        version: 1,
+        name: 'search'
+    }
+    let otherConfig = {
+        ...defaultConfig, name: 'exercise'
+    }
+    console.log(otherConfig) // lúc này otherConfig sẽ là api: 'google.com', version: 1, name: 'exercise'
+    // spread với hàm
+    let array = ['test', 'check', 'teams']
+
+    // toán tử rest khi khởi tạo hàm
+    function spreadFunction(...items) {
+        console.log(items)
+    }
+
+    //toán tử spread khi gọi hàm
+    spreadFunction(...array) // test check teams
+</script>
+</body>
+</html>

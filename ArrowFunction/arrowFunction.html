@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //function bình thường
+    // function logger(item) {
+    //     console.log(item)
+    // }
+
+    // const logger = function (item) {
+    //     console.log(item)
+    // }
+
+    // const logger = (item) => {
+    //     console.log(item)
+    // }
+    // Nếu hàm chỉ có 1 tha số thì ta có thể bỏ ()
+    // const logger = item => console.log(item)
+    // Nếu khối code không có dấu {} thì hàm sẽ hiểu là return tất cả những gì sau dấu =>
+    // như ví dụ dưới là return ra console.log(item)
+    // const logger = item => console.log(item)
+    // logger(2)
+    // Nếu dùng với {} thì sẽ không return ra kết quả trong cặp {}
+    // Ta phải dùng từ khóa return thì mới trả về kết quả
+
+    // const sum = (a,b) => {
+    //     return a+b
+    // }
+    // arrow function trả về 1 đối tượng
+    // const sum = (a, b) => {
+    //     return {
+    //         a: a,
+    //         b: b
+    //     };
+    // }
+
+    // phải cho vào cặp ngoặc tròn để nhóm lại vì hàm sẽ tưởng {} là khối block code
+    // const sum = (a,b) => ({a:a, b:b})
+    // sum(3, 4)
+    // const course = {
+    //     name: 'Javascript',
+    //     getName: function(){
+    //         return this.name;
+    //     }
+    // }
+    // Không thể dùng được context
+    //     const course = {
+    //         name: 'Javascript',
+    //         getName: () =>{
+    //             this.name // undefined
+    //         }
+    //     }
+
+    // Không thể dùng làm constructor function
+
+    // console.log(course.getName())
+    // const Course = function (title, age)
+    // {
+    //     this.title = title
+    //     this.title = age
+    // }
+    // Không dùng được như dưới:
+    //
+    // const Couse =(title, age) => {
+    //     this.title = title
+    //     this.title = age
+    // }
+    let course2 = new Course('khoi', 12)
+    console.log(course2)
+</script>
+</body>
+</html>

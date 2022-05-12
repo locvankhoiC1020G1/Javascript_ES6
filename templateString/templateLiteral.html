@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Template string là 1 cú pháp cho phép viết biểu thức ngay trong  string
+    // trả về 1 thẻ html với hàm
+    function template() {
+        return `<div></div>`
+    }
+    const name = 'khoi'
+    const firstName = 'loc'
+    const myName = `${name} ${firstName}`
+    console.log(myName)
+    //Nếu muốn viết ký tự đặc biệt trong template string thì ta thêm ký tự \ là được
+    // VD: in ra ${}
+    console.log(`\${}`)
+
+</script>
+</body>
+</html>

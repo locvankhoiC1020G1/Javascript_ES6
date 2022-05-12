@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // destructuring với object
+    // gán các biến bằng tên key của object, tên biến phải trùng với tên của key.
+    //nếu khai báo biến k trùng tên key của object thì sẽ undefine
+    let course = {
+        name: 'javascript',
+        price: 1000,
+        age: 26
+    }
+    // let {name, price, price2} = course
+    // // biến price2 sẽ là undefine
+    // console.log(name, price, price2)
+
+    //toán tử rest
+    let {name, ...newLanguage} = course
+    console.log(newLanguage)// price:1000, age:26
+
+    // destructuring với object con
+    // lấy ra thuộc tính name của object con
+    let myObject = {
+        language: 'ruby',
+        hard: 'very hard',
+        time: '6 month',
+        member: {
+            language: 'rails'
+        },
+        other: {
+            lang: 'PHP'
+        }
+    }
+    //nếu muốn lấy language của object con thì ta phải đổi tên của object cha.
+    // do language của con đè lên class cha, nên ta gán key của cha bằng tên biến khác
+    let {language: parentName, member: {language}, other: {lang}} = myObject
+    console.log(parentName, language, lang) // ruby rails php
+    //tạo giá trị mặc định
+    let project = {
+        id: 1,
+        runtime: 4
+    }
+    let {id, description = 'gia tri mac dinh'} = project
+    console.log(description) // gia tri mac dinh
+    console.log(project) //id: 1 runtime: 4
+    // destructuring object
+    // function destructuringObject({name,age}) {
+    //     console.log(name)
+    //     console.log(age)
+    // }
+    //
+    // destructuringObject({
+    //     name: 'khoi33',
+    //     age: 20
+    // })
+</script>
+</body>
+</html>

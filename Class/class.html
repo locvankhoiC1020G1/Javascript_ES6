@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //là 1 khuôn mẫu tạo ra các object
+    // tạo 1 class bằng function
+
+    function Course(name, price) {
+        this.name = name;
+        this.price = price
+        this.getName = function () {
+            return this.name
+        }
+    }
+
+    const PHP = new Course('ppp', 1000)
+    const Ruby = new Course('ruby', 1000)
+    const Python = new Course('python')
+    console.log(Python)
+    console.log(PHP)
+
+    // tạo 1 class bằng function
+    class Course2 {
+        constructor(name, price) {
+            this.name = name;
+            this.price = price
+        }
+
+        getName() {
+            return this.name
+        }
+    }
+</script>
+</body>
+</html>

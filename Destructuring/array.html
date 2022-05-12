@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // destructuring là khái niệm phân rã, dùng cho array và object
+    // dùng để gán các biến với giá trị trong mảng
+    let names = ['php', 'python', 'ruby', 'java', 'js']
+    let [a, b, c] = names
+    // nếu bỏ biến b và chỉ lấy a,c thì lúc đó giá trị sẽ lấy là:
+    // let [a, , c] = names
+    // console.log(a, c) // php ruby
+    console.log(a, b, c) // php python ruby
+
+    // Toán tử rest: lấy ra những phần còn lại, trả về 1 mảng
+    // Toán tử rest sử dụng với destructuring
+    //rest khi sử dụng với destructuring phải đứng cuối cùng
+    let arr = [1, 2, 3, 4, 5, 6, 10]
+    let [d, e, ...all] = arr
+    console.log(all[0])
+    // toán tử rest với tham số, lúc này sẽ truyền 1 mảng những phần tử còn lại
+    // ví dụ bên dưới là 1 mảng tên là item
+    function countNumber(...item) {
+        console.log(item)
+    }
+
+    console.log(countNumber(1, 2, 3, 4, 5, 6))
+
+    function countNumber2(a, ...items) {
+        console.log(a)
+        console.log(items)
+    }
+
+    countNumber2(90, 1, 2, 3, 4)
+    // a = 90, items = 1,2,3,4
+
+
+    // destructuring với hàm:
+    function destructuringArray([a,b, ...remain]){
+        console.log(a)
+        console.log(b)
+        console.log(remain)
+    }
+    destructuringArray([2,6,12,3,4,5])
+</script>
+</body>
+</html>
